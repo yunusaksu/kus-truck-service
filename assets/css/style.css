@@ -1,0 +1,167 @@
+/* KUS LOGO TABANLI ÖZEL CSS STİLLERİ */
+:root {
+  --kus-blue: #1a3e93; /* Logodaki ana koyu mavi */
+  --kus-red: #e63b3f; /* Logodaki ana kırmızı */
+  --light-bg: #f8f9fa;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* TOP BAR YUKARIYA SABİTLENDİ (STICKY) */
+.top-bar {
+  background-color: #0f255a;
+  border-bottom: 3px solid var(--kus-red);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+.top-bar a {
+  transition: opacity 0.3s ease;
+}
+.top-bar a:hover {
+  opacity: 0.8;
+  color: var(--kus-red) !important;
+}
+
+/* NAVBAR TOP BAR'IN HEMEN ALTINA SABİTLENDİ */
+.navbar-custom {
+  background-color: var(--kus-blue);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 45px;
+  z-index: 1020;
+}
+.navbar-custom .navbar-brand {
+  padding: 0;
+}
+.navbar-custom .navbar-brand img {
+  height: 60px;
+  padding: 5px;
+}
+.navbar-custom .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar-custom .nav-link:hover {
+  color: var(--kus-red) !important;
+}
+
+/* Hizmet Kartları */
+.service-card {
+  border: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hero Slider Bölümü */
+.carousel-item {
+  height: 55vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.62);
+}
+.carousel-caption {
+  bottom: 20%;
+  z-index: 2;
+}
+.carousel-caption h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.carousel-caption p {
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* İletişim Formu */
+.form-control:focus {
+  border-color: var(--kus-red);
+  box-shadow: 0 0 0 0.25rem rgba(230, 59, 63, 0.25);
+}
+.btn-kus-red {
+  background-color: var(--kus-red);
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn-kus-red:hover {
+  background-color: #bf3033;
+  color: white;
+}
+
+/* Harita Konteyneri */
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Footer */
+.footer-kus {
+  background-color: #0f255a;
+  color: #f8f9fa;
+}
+
+/* Responsive (Mobil) İnce Ayarlar */
+@media (max-width: 768px) {
+  .navbar-custom {
+    top: 70px;
+  }
+  .navbar-custom .navbar-brand img {
+    height: 50px;
+  }
+  .carousel-item {
+    height: 45vh;
+  }
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+  .carousel-caption .btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .top-bar .phone-link {
+    font-size: 1.2rem !important;
+    display: block;
+    margin-top: 5px;
+  }
+}
